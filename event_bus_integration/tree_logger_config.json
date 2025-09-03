@@ -1,0 +1,62 @@
+{
+    "version": 1,
+    "default_logger": "treelogger",
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple": {
+            "format": "%(asctime)s - %(levelname)s - %(message)s"
+        },
+        "detailed": {
+            "format": "[%(levelname)s|%(module)s|L%(lineno)d] %(asctime)s: %(message)s",
+            "datefmt": "%Y-%m-%dT%H:%M:%S"
+        },
+        "detailed_v2": {
+            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s - (line: %(lineno)d) [%(filename)s]",
+            "datefmt": "%Y-%m-%dT%H:%M:%S"
+        },
+        "sensor_format": {
+            "format":"%(asctime)s - %(message)s",
+            "datefmt":"%Y-%m-%dT%H:%M:%S"
+        }
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "INFO",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        },
+        "file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "detailed_v2",
+            "filename": "logs/treebot.log",
+            "maxBytes": 10000,
+            "backupCount": 3
+        },
+        "sensor_file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "INFO",
+            "formatter": "sensor_format",
+            "filename": "logs/sensor_readings.log",
+            "maxBytes": 10000,
+            "backupCount": 3
+        }
+    },
+    "loggers": {
+        "treelogger": {
+            "level": "INFO",
+            "handlers": ["console", "file"],
+            "propagate": false
+        },
+        "sensor_manager": {
+            "level": "INFO", 
+            "handlers": ["console", "sensor_file"],
+            "propagate": false
+            },
+        "root": {
+            "level": "DEBUG",
+            "handlers": ["console"]
+        }
+    }
+}
