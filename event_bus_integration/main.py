@@ -35,7 +35,8 @@ from tree_logger import setup_logging, TreeLogger
 log = setup_logging()  # Only call once, at the start
 tree_logger = TreeLogger()
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)  # really neat! basically creates a little module specific logger, using the root configs
+logger.info("This will go to both console and logs/treebot.log")
 
 ## use decorator like this: 
 # @tree_logger.time_function("some_test_loop", "LOOP")
@@ -626,6 +627,7 @@ class DebugMonitor:
 # ============= MAIN ENTRY POINT =============
 #MARK:
 async def main():
+
     """Main application entry point"""
     logger.info("Starting Voice Assistant with Event Bus Architecture")
     

@@ -1,8 +1,8 @@
 import threading
 import random
 import logging
-from event_bus import EventBus, PresenceDetectedEvent, PresenceLostEvent
 
+from event_bus import EventBus, PresenceDetectedEvent, PresenceLostEvent
 
 class MMWaveSensor(threading.Thread):
     """

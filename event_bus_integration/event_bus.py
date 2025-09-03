@@ -11,8 +11,9 @@ import random
 import json
 
 import logging
-logger = logging.getLogger(__name__)
 
+# use module specific logger (needs to be set up in config)
+logger = logging.getLogger(__name__)
 
 #MARK:
 class Event:
