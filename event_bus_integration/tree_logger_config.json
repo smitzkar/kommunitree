@@ -1,6 +1,5 @@
 {
     "version": 1,
-    "default_logger": "treelogger",
     "disable_existing_loggers": false,
     "formatters": {
         "simple": {
@@ -53,10 +52,10 @@
             "level": "INFO", 
             "handlers": ["console", "sensor_file"],
             "propagate": false
-            },
-        "root": {
-            "level": "DEBUG",
-            "handlers": ["console"]
         }
+    },
+    "root": {
+        "level": "DEBUG",
+        "handlers": ["console"]
     }
 }
