@@ -7,25 +7,69 @@ import logging
 import logging.config
 import json
 import time
+from datetime import datetime
 import functools
 from typing import Optional, Callable
 
 
 #MARK: setup_logging
-def setup_logging(config_file="tree_logger_config.json", logger_name="treelogger"):
+def setup_logging(
+    config_file: Optional[str] = "tree_logger_config.json", 
+    config_dict: Optional[dict] = None, 
+    logger_name="root", 
+    log_per_session=True):
     """
-    Tries to create a logger from config file (json)
-    """
+    Tries to create a logger from config file (json) or dict
     
+    Default: combine logs per session
+    Optional: dump it all in one big file
+    """
+    # Priority: config_dict > config_file > fallback
     try:
-        with open(config_file) as conf:
-            config = json.load(conf)
-        logging.config.dictConfig(config)
-        return logging.getLogger(logger_name)
+        import os
+        os.makedirs("logs", exist_ok=True)
     except Exception as e:
-        print(f"Failed to setup logging: {e}")
-        logging.basicConfig(level=logging.INFO)
-        return logging.getLogger(logger_name)
+        print(f"Failed to find or set up logs directory ({e})")
+
+    # try config_dict first
+    if config_dict:
+        try:
+            logging.config.dictConfig(config_dict)
+            print(f"Success: Loaded config from dict.")  # Debug
+            return logging.getLogger(logger_name)
+        except (ValueError, TypeError, KeyError) as e:
+            print(f"Warning: Could not load config from dict ({e}). Trying config file.")
+
+    # then config_file
+    if config_file:
+        try:
+            with open(config_file) as conf:
+                config = json.load(conf)
+            if log_per_session and "handlers" in config and "file" in config["handlers"]:
+                session_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+                log_filename = f"logs/treebot_{session_time}.log"
+                config["handlers"]["file"]["filename"] = log_filename
+            logging.config.dictConfig(config)
+            print(f"Success: Loaded config from {config_file}")  # Debug
+            return logging.getLogger(logger_name)
+        except (FileNotFoundError, ValueError, ImportError, KeyError) as e:
+            print(f"Warning: Could not load config from file ({e}). Using fallback.")
+
+    # if all fails, fallback to simple console logger
+    logger = logging.getLogger(logger_name)
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter(
+            "%(asctime)s - %(name)s - %(levelname)s - %(message)s - (line: %(lineno)d) [%(filename)s] [FALLBACK]",
+            datefmt="%Y-%m-%dT%H:%M:%S"
+        )
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+        print(f"Fallback config for logger: {logger.name}")
+    return logger
+
+
 
 #MARK: TreeLogger
 class TreeLogger():
@@ -49,53 +93,8 @@ class TreeLogger():
                  config_dict: Optional[dict] = None):
         self.logger = logging.getLogger(logger_name)
         self.enable_console_output = enable_console_output
-        self._setup_logging(config_file, config_dict)
-        
-    def _setup_logging(self, config_file: Optional[str] = None, config_dict: Optional[dict] = None):
-    # Priority: config_dict > config_file > fallback
-    
-        # try to create logs directory if it doesn't exist
-        #MARK: experimental
-        try:
-            import os
-            os.makedirs("logs", exist_ok=True)
-        except Exception as e:
-            print(f"Failed to find or set up logs directory ({e})")
-        
-        if config_dict:
-            try:
-                logging.config.dictConfig(config_dict)
-                print(f"Success: Loaded config from {config_dict}")  # Debug
-                return
-            except (ValueError, TypeError, KeyError) as e:
-                print(f"Warning: Could not load config from script ({e}). Trying config file.")
-        
-        if config_file:
-            try:
-                with open(config_file) as conf:
-                    config = json.load(conf)
-                logging.config.dictConfig(config)
-                print(f"Success: Loaded config from {config_file}")  # Debug
-                return
-            except (FileNotFoundError, ValueError, ImportError) as e:
-                print(f"Warning: Could not load logging config ({e}). Using fallback.")
-        
-        # super simple fallback (best not to use as this messes with logging from other libraries)
-        #logging.basicConfig(filename='treebot.log', level=logging.INFO)
-        
-        # better fallback using handlers (only affects this one)
-        if not self.logger.handlers:
-            handler = logging.StreamHandler()  # logs to console (stdout/stderr)
-            formatter = logging.Formatter(
-                "%(asctime)s - %(name)s - %(levelname)s - %(message)s - (line: %(lineno)d) [%(filename)s] [FALLBACK]",
-                datefmt="%Y-%m-%dT%H:%M:%S"
-            ) # add "[FALLBACK]" to indicate it in logs
-            handler.setFormatter(formatter)
-            self.logger.addHandler(handler)   
-            self.logger.setLevel(logging.INFO)  # forgot this
-            print(f"Fallback config for logger: {self.logger.name}")  # Debug
-
-            
+        #self._setup_logging(config_file, config_dict)
+        # removed this, as it just messed with things! 
 
     def time_function(self, func_or_custom = None, category: str = "GENERAL"):
         """

@@ -33,7 +33,7 @@ from tree_logger import setup_logging, TreeLogger
 
 #MARK: logging
 log = setup_logging()  # Only call once, at the start
-tree_logger = TreeLogger()
+#tree_logger = TreeLogger()
 
 logger = logging.getLogger(__name__)  # really neat! basically creates a little module specific logger, using the root configs
 logger.info("This will go to both console and logs/treebot.log")
