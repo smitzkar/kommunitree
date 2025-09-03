@@ -2,6 +2,10 @@
 .env
 .DS_Store
 
+# private testing area
+#chat_flow/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
