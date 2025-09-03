@@ -4,6 +4,7 @@
 
 # private testing area
 #chat_flow/
+__init__.fish
 
 
 # Byte-compiled / optimized / DLL files

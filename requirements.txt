@@ -1,0 +1,25 @@
+# for audio
+numpy       #==2.0.1
+sounddevice #==0.4.7
+soundfile   #==0.12.1
+#webrtcvad   # replacement for ambient and threshold calculation
+
+# openai
+#openai      ==1.78.0  # when installing without specified version, it somehow installed an older one which broke things
+openai # for graphviz integration, a newer version was required, so I ran upgraded to currently 1.105.0
+openai-agents[voice]
+
+# environment secrets (api keys)
+python-dotenv #==1.0.1
+
+
+#=== For Development / Testing ===
+
+# for hosting, visualisation, etc.
+streamlit
+# openai_agent[viz] # graphviz needs to be installed via sudo apt (doesn't seem to be supported by the same openai version as voice...)
+ipykernel
+
+# in wsl
+# sudo apt update && sudo apt install -y portaudio19-dev
+# potentially also libasound2-dev
