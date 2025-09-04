@@ -21,6 +21,12 @@ from tree_logger import setup_logging
 from system_controller import SystemController
 from debug_monitor import DebugMonitor
 
+from event_bus import EventBus
+from audio_manager import AudioManager
+from conversation import ConversationManager
+from mmwave_sensor import MMWaveSensor
+
+
 #MARK: setup logging
 # log = setup_logging(log_per_session=False)
 # logger = logging.getLogger(__name__)

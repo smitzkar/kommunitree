@@ -43,8 +43,26 @@ class SystemController:
         # subscribe to system events
         self.bus.subscribe(ButtonPressEvent, self._handle_button)
         self.bus.subscribe(ShutdownRequestEvent, self._handle_shutdown)
+        self.bus.subscribe(PresenceDetectedEvent, self._handle_presence_detected)
+        self.bus.subscribe(PresenceLostEvent, self._handle_presence_lost)
         
         self.running = True
+        
+    
+    #MARK: handle presence
+    def _handle_presence_detected(self, event: PresenceDetectedEvent):
+        """handle presence detected event and start conversation"""
+        self.logger.info("Presence detected")
+        # TODO: Add custom logic here (e.g., check system state, time, etc.)
+        self.bus.publish(ConversationStartEvent())
+
+    def _handle_presence_lost(self, event: PresenceLostEvent):
+        """handle presence lost event and end conversation"""
+        self.logger.info("Presence lost")
+        # TODO: Add custom logic here (e.g., check system state, time, etc.)
+        self.bus.publish(ConversationEndEvent())
+    
+
     
     def _handle_button(self, event: ButtonPressEvent):
         """handle button presses"""

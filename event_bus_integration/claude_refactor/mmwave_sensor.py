@@ -21,21 +21,27 @@ class MMWaveSensor(threading.Thread):
         """Monitor presence sensor"""
         self.logger.info("MMWave sensor started")
         
+        #MARK: simulated
+        # just simulates actual sensor readings via random generator
+        total_time = 0
         while self.running:
             try:
-                # Simulate presence detection
-                # Real implementation: read from UART/I2C
-                new_presence = random.random() > 0.9 # basically changes 10% of the time
-                
-                # Only publish on state change to avoid event spam
-                if new_presence != self.presence:
-                    self.presence = new_presence
-                    if self.presence:
-                        self.bus.publish(PresenceDetectedEvent())
+                if total_time <= 0:
+                    # Randomly decide next state and dwell duration
+                    new_presence = random.random() > 0.5  # 50% chance to switch
+                    if new_presence:
+                        total_time = random.randint(5, 15)  # seconds present
                     else:
-                        self.bus.publish(PresenceLostEvent())
-                
-                threading.Event().wait(config.presence_check_interval)  
-                
+                        total_time = random.randint(5, 15)  # seconds absent
+                    # Only publish on state change
+                    if new_presence != self.presence:
+                        self.presence = new_presence
+                        if self.presence:
+                            self.bus.publish(PresenceDetectedEvent())
+                        else:
+                            self.bus.publish(PresenceLostEvent())
+                else:
+                    total_time -= config.presence_check_interval
+                threading.Event().wait(config.presence_check_interval)
             except Exception as e:
                 self.logger.error(f"Error reading mmWave sensor: {e}")
