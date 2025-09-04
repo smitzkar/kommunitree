@@ -19,7 +19,10 @@ class Config:
     """
     # sensor settings
     sensor_interval: int = 60  # seconds between sensor readings
-    sensor_csv_file: str = "sensor_data.csv"
+    sensor_csv_file: str = "logs/sensor_data.csv"
+    
+    # mmwave sensor settings (human presence detection)
+    presence_check_interval: int = 1 # seconds
     
     # audio settings  
     speech_timeout: int = 10  # seconds to wait for speech

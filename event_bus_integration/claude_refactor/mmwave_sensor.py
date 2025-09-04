@@ -1,6 +1,7 @@
 import threading
 import random
 import logging
+from config import config
 
 from event_bus import EventBus, PresenceDetectedEvent, PresenceLostEvent
 
@@ -24,7 +25,7 @@ class MMWaveSensor(threading.Thread):
             try:
                 # Simulate presence detection
                 # Real implementation: read from UART/I2C
-                new_presence = random.random() > 0.6
+                new_presence = random.random() > 0.9 # basically changes 10% of the time
                 
                 # Only publish on state change to avoid event spam
                 if new_presence != self.presence:
@@ -34,7 +35,7 @@ class MMWaveSensor(threading.Thread):
                     else:
                         self.bus.publish(PresenceLostEvent())
                 
-                threading.Event().wait(1)  # Check every second
+                threading.Event().wait(config.presence_check_interval)  
                 
             except Exception as e:
                 self.logger.error(f"Error reading mmWave sensor: {e}")
