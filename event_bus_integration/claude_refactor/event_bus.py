@@ -9,67 +9,12 @@ from enum import Enum
 import weakref
 import random
 import json
+from events import *
 
 import logging
 
 # use module specific logger (needs to be set up in config)
 logger = logging.getLogger(__name__)
-
-#MARK:
-class Event:
-    """
-    Base class for all events in the system.
-    Using a class hierarchy makes it easy to filter and handle specific event types.
-    """
-    def __init__(self, data: Any = None):
-        self.timestamp = datetime.now()
-        self.data = data
-        self.event_type = self.__class__.__name__
-    
-    def __repr__(self):
-        return f"{self.event_type}(data={self.data}, time={self.timestamp})"
-
-# Define specific event types - this makes the system self-documenting
-class SensorDataEvent(Event):
-    """Fired when new sensor data is available"""
-    pass
-
-class PresenceDetectedEvent(Event):
-    """Fired when mmWave sensor detects presence"""
-    pass
-
-class PresenceLostEvent(Event):
-    """Fired when person leaves detection range"""
-    pass
-
-class ButtonPressEvent(Event):
-    """Fired when a GPIO button is pressed"""
-    pass
-
-class ConversationStartEvent(Event):
-    """Request to start a new conversation"""
-    pass
-
-class ConversationEndEvent(Event):
-    """Conversation has ended"""
-    pass
-
-class UserSpeechEvent(Event):
-    """User has spoken something"""
-    pass
-
-class AssistantSpeechEvent(Event):
-    """Assistant needs to speak"""
-    pass
-
-class SystemStateChangeEvent(Event):
-    """System state has changed"""
-    pass
-
-class ShutdownRequestEvent(Event):
-    """Request to shutdown the system"""
-    pass
-
 
 #MARK:
 class EventBus:
@@ -96,6 +41,7 @@ class EventBus:
         self.max_history = 100
     
     def subscribe(self, event_type: type, callback: Callable):
+        logger.debug(f"Subscribing {callback} to {event_type}")
         """
         Subscribe to events of a specific type.
         
@@ -114,14 +60,19 @@ class EventBus:
             # Sync callback - use weakref to avoid memory leaks
             if event_type not in self._subscribers:
                 self._subscribers[event_type] = []
-            
-            # Create weak reference to the callback
-            # This prevents memory leaks if subscriber forgets to unsubscribe
-            weak_callback = weakref.ref(callback)
+                
+            # Use WeakMethod for bound methods (inside classes like system_controller), weakref.ref for functions
+            if hasattr(callback, "__self__") and callback.__self__ is not None:
+                # Bound method
+                weak_callback = weakref.WeakMethod(callback)
+            else:
+                # Function
+                weak_callback = weakref.ref(callback)
             self._subscribers[event_type].append(weak_callback)
             logger.debug(f"Sync subscription: {callback.__name__} -> {event_type.__name__}")
     
     def publish(self, event: Event):
+        logger.debug(f"Publishing event: {event} to subscribers of type {type(event)}")
         """
         Publish an event to all subscribers.
         Can be called from both sync and async contexts.
@@ -136,17 +87,19 @@ class EventBus:
         # Handle sync subscribers
         event_type = type(event)
         if event_type in self._subscribers:
+            logger.debug(f"Found {len(self._subscribers[event_type])} sync subscribers for {event_type}")
             # Clean up dead references and call alive ones
             alive_callbacks = []
             for weak_callback in self._subscribers[event_type]:
                 callback = weak_callback()
+                logger.debug(f"Checking callback: {callback}")
                 if callback is not None:
                     alive_callbacks.append(weak_callback)
                     try:
+                        logger.debug(f"Calling sync callback: {callback} for event: {event}")
                         callback(event)
                     except Exception as e:
                         logger.error(f"Error in sync callback: {e}")
-            
             # Update list with only alive callbacks
             self._subscribers[event_type] = alive_callbacks
         
