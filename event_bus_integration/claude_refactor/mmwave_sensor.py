@@ -3,7 +3,8 @@ import random
 import logging
 from config import config
 
-from event_bus import EventBus, PresenceDetectedEvent, PresenceLostEvent
+from event_bus import EventBus
+from events import PresenceDetectedEvent, PresenceLostEvent
 
 class MMWaveSensor(threading.Thread):
     """

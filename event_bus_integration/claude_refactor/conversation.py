@@ -37,13 +37,13 @@ class ConversationManager:
         # subscribe to events
         self.bus.subscribe(ConversationStartEvent, self._handle_start_request)
         self.bus.subscribe(ConversationEndEvent, self._handle_end)
+        
+    # removed _handle_presence; presence is now handled by SystemController
     
-    # Removed _handle_presence; presence is now handled by SystemController
-    
-    def _handle_start_request(self, event: ConversationStartEvent):
+    async def _handle_start_request(self, event: ConversationStartEvent):
         """explicit request to start conversation"""
         if not self.active:
-            asyncio.create_task(self.start_conversation())
+            await self.start_conversation()
     
     def _handle_end(self, event: ConversationEndEvent):
         """conversation ending"""

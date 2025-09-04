@@ -27,7 +27,12 @@ class AudioManager:
         self.is_playing = False
         self.is_listening = False
         self.logger = logging.getLogger(self.__class__.__name__)
-        
+        # Store main event loop for thread communication
+        try:
+            self.main_loop = asyncio.get_running_loop()
+        except RuntimeError:
+            self.logger.warning("AudioManager: No running event loop found during init; using get_event_loop().")
+            self.main_loop = asyncio.get_event_loop()
         # subscribe to speech events
         bus.subscribe(AssistantSpeechEvent, self._handle_assistant_speech)
     
@@ -83,14 +88,12 @@ class AudioManager:
             """blocking listen operation"""
             self.is_listening = True
             self.logger.info("listening for speech...")
-            
             try:
                 if config.simulate_hardware:
                     # simulate speech recognition
                     import time
                     import random
                     time.sleep(2)
-                    
                     if random.random() > 0.3:
                         text = "Hello, how are you today?"
                     else:
@@ -100,20 +103,16 @@ class AudioManager:
                     # audio = record_audio(timeout)
                     # text = openai.audio.transcribe(audio)
                     text = None
-                
-                # set result in async context
-                loop = asyncio.get_event_loop()
+                # set result in async context using main event loop
                 asyncio.run_coroutine_threadsafe(
                     self._set_future(future, text),
-                    loop
+                    self.main_loop
                 )
-                
             except Exception as e:
                 self.logger.error(f"error listening: {e}")
-                loop = asyncio.get_event_loop()
                 asyncio.run_coroutine_threadsafe(
                     self._set_future(future, None),
-                    loop
+                    self.main_loop
                 )
             finally:
                 self.is_listening = False
