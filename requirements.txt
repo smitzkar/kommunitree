@@ -20,6 +20,13 @@ streamlit
 # openai_agent[viz] # graphviz needs to be installed via sudo apt (doesn't seem to be supported by the same openai version as voice...)
 ipykernel
 
+#=== sudo apt install ===
+
+# to replace rpi.gpio 
+# (is installed by default on rasperry pi os)
+# includes mock factory for development on devices without gpio pins!
+# sudo apt update && sudo apt install -y python3-gpiozero 
+
 # in wsl
 # sudo apt update && sudo apt install -y portaudio19-dev
 # potentially also libasound2-dev

@@ -67,6 +67,7 @@ class SimpleVoiceAssistant:
         else:
             self._run_simple()
     
+    #MARK: run with display
     def _run_with_display(self):
         """Run with rich live display"""
         console = Console()
@@ -84,6 +85,7 @@ class SimpleVoiceAssistant:
         except KeyboardInterrupt:
             print("\nShutting down...")
     
+    #MARK: create rich displaty
     def _create_display(self):
         """Create the status display table"""
         table = Table(title="Voice Assistant Status")
@@ -283,6 +285,7 @@ class SimpleVoiceAssistant:
         await self._speak("Shutting down. Goodbye!")
         self.running = False
 
+#MARK: main
 def main():
     assistant = SimpleVoiceAssistant()
     assistant.start()
