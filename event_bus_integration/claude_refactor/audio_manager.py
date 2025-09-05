@@ -13,7 +13,7 @@ from typing import Optional
 import logging
 
 from config import config
-from events import AssistantSpeechEvent, UserSpeechEvent
+from events import AssistantSpeechEvent, UserSpeechEvent, InterruptAudioEvent
 from event_bus import EventBus
 
 #MARK: AudioManager
@@ -33,8 +33,22 @@ class AudioManager:
         except RuntimeError:
             self.logger.warning("AudioManager: No running event loop found during init; using get_event_loop().")
             self.main_loop = asyncio.get_event_loop()
+            
+            
+        #MARK: added by copilot
+        # why does it use self.bus.subscribe, instead of bus.subscribe, here? 
+        # -> it doesn't really matter here, as we're still inside __init__, 
+        # so bus is directly accessible, but it's just best practice to make sure it uses the correct one     
         # subscribe to speech events
-        bus.subscribe(AssistantSpeechEvent, self._handle_assistant_speech)
+        self.bus.subscribe(AssistantSpeechEvent, self._handle_assistant_speech)
+        self.bus.subscribe(InterruptAudioEvent, self._handle_interrupt_audio)
+        
+    #MARK: NEW   
+    def _handle_interrupt_audio(self, event):
+        """Handle interrupt event to stop audio operations"""
+        self.logger.info("InterruptAudioEvent received: stopping audio operations.")
+        self.is_listening = False
+        self.is_playing = False
     
     def _handle_assistant_speech(self, event: AssistantSpeechEvent):
         """handle request to speak"""

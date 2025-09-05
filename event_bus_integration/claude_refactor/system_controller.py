@@ -62,7 +62,6 @@ class SystemController:
         # TODO: Add custom logic here (e.g., check system state, time, etc.)
         self.bus.publish(ConversationEndEvent())
     
-
     
     def _handle_button(self, event: ButtonPressEvent):
         """handle button presses"""
@@ -126,15 +125,14 @@ class SystemController:
     async def cleanup(self):
         """cleanup all components gracefully"""
         self.logger.info("cleaning up...")
-        
+        # Interrupt audio operations before stopping hardware threads
+        self.bus.publish(InterruptAudioEvent())
         # stop hardware threads
         self.sensors.stop()
         self.buttons.stop()
         self.mmwave.running = False
-        
         # final state
         self.state.change_state(SystemState.IDLE)
-        
         self.logger.info("cleanup complete")
     
     def stop(self):

@@ -16,16 +16,9 @@ minimal code here - just starts the system
 
 import time
 import asyncio
-import logging
 from tree_logger import setup_logging
 from system_controller import SystemController
 from debug_monitor import DebugMonitor
-
-from event_bus import EventBus
-from audio_manager import AudioManager
-from conversation import ConversationManager
-from mmwave_sensor import MMWaveSensor
-
 
 #MARK: setup logging
 # log = setup_logging(log_per_session=False)
@@ -42,11 +35,12 @@ logger = setup_logging(
 
 #MARK: main
 async def main():
-    """start the voice assistant"""
-    logger.info("starting voice assistant")
-    start = time.perf_counter() # doesn't print anything, used for runtime calc later
+    """starts the various components"""
+    logger.info("New Session")
+    start = time.perf_counter() # used for runtime calc later, just stores the start time in variable
     
-    # create system controller
+    # creates the system controller
+    # essentially controls everything
     controller = SystemController()
     
     # create debug monitor

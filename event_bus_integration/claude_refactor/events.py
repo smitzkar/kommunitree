@@ -5,6 +5,9 @@
 """
 events.py - all event definitions in one place
 separated from event_bus.py for clarity
+
+this should only include events that are either directly consumed by other components, or seem important enough to highlight centrally in logs 
+
 """
 
 from datetime import datetime
@@ -21,7 +24,7 @@ class Event:
     def __repr__(self):
         return f"{self.event_type}(data={self.data}, time={self.timestamp})"
 
-# hardware events
+#MARK: hardware events
 class SensorDataEvent(Event):
     """new sensor reading available"""
     pass
@@ -38,7 +41,7 @@ class ButtonPressEvent(Event):
     """gpio button was pressed"""
     pass
 
-# conversation events
+#MARK: conversation events
 class ConversationStartEvent(Event):
     """start a new conversation"""
     pass
@@ -55,11 +58,16 @@ class AssistantSpeechEvent(Event):
     """assistant wants to speak"""
     pass
 
-# system events
+#MARK: system events
 class SystemStateChangeEvent(Event):
     """system state changed"""
     pass
 
 class ShutdownRequestEvent(Event):
     """shutdown the system"""
+    pass
+
+#MARK: audio interrupt event
+class InterruptAudioEvent(Event):
+    """Signal to interrupt/cancel audio operations (listening/playback)"""
     pass

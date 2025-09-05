@@ -25,12 +25,12 @@ class DebugMonitor:
         self.bus = bus
         self.logger = logging.getLogger(self.__class__.__name__)
         
-        # list of all event types to monitor
+        # list of all event types to monitor (currently simply includes everything)
         self.event_types = [
             SensorDataEvent, PresenceDetectedEvent, PresenceLostEvent,
             ButtonPressEvent, ConversationStartEvent, ConversationEndEvent,
             UserSpeechEvent, AssistantSpeechEvent, SystemStateChangeEvent,
-            ShutdownRequestEvent
+            ShutdownRequestEvent, InterruptAudioEvent
         ]
         
         # subscribe to all events

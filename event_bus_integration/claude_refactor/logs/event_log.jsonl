@@ -1,0 +1,212 @@
+{"timestamp": "2025-09-04T13:50:09.684119", "type": "SensorDataEvent", "data": "SensorData(temperature=29.469639408933624, humidity=45.470697001833244, timestamp=datetime.datetime(2025, 9, 4, 13, 50, 9, 684111), presence_detected=False)"}
+{"timestamp": "2025-09-04T13:50:50.923023", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T13:50:54.898367", "type": "SensorDataEvent", "data": "SensorData(temperature=28.308017838199454, humidity=58.31845850693204, timestamp=datetime.datetime(2025, 9, 4, 13, 50, 54, 898357), presence_detected=False)"}
+{"timestamp": "2025-09-04T13:51:01.903530", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T13:51:01.912946", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T13:51:01.910314", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T13:51:01.901105", "type": "PresenceDetectedEvent", "data": "None"}
+{"timestamp": "2025-09-04T13:51:01.941163", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T13:51:01.936619", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T13:51:01.948585", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T13:51:06.671022", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T13:51:07.183315", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T13:51:12.104191", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T13:51:14.100698", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T13:51:16.129163", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T13:51:16.648353", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T13:51:17.935860", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T13:51:17.933474", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T13:51:17.946296", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T13:51:17.944669", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T13:51:17.928258", "type": "PresenceLostEvent", "data": "None"}
+{"timestamp": "2025-09-04T13:51:19.626741", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T13:51:19.614006", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T13:51:19.640359", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T13:51:23.381221", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T15:05:58.170214", "type": "SensorDataEvent", "data": "SensorData(temperature=25.654058975820497, humidity=52.521664928390294, timestamp=datetime.datetime(2025, 9, 4, 15, 5, 58, 170205), presence_detected=False)"}
+{"timestamp": "2025-09-04T15:05:58.175826", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T15:05:58.187126", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T15:05:58.183181", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:05:58.171053", "type": "PresenceDetectedEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:05:58.216842", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T15:05:58.212191", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:05:58.222183", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T15:06:02.940575", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T15:06:03.456656", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T15:06:05.791812", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T15:06:10.997091", "type": "SensorDataEvent", "data": "SensorData(temperature=20.11010919777712, humidity=47.58878986408685, timestamp=datetime.datetime(2025, 9, 4, 15, 6, 10, 997082), presence_detected=False)"}
+{"timestamp": "2025-09-04T15:06:21.015474", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T15:06:21.013657", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:06:21.024377", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.SHUTTING_DOWN: 'shutting_down'>}"}
+{"timestamp": "2025-09-04T15:06:21.009250", "type": "ShutdownRequestEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:06:21.001493", "type": "ButtonPressEvent", "data": "shutdown"}
+{"timestamp": "2025-09-04T15:06:22.030235", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.SHUTTING_DOWN: 'shutting_down'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T15:35:56.195722", "type": "SensorDataEvent", "data": "SensorData(temperature=24.168484726788122, humidity=49.08402153141906, timestamp=datetime.datetime(2025, 9, 4, 15, 35, 56, 195713), presence_detected=True)"}
+{"timestamp": "2025-09-04T15:36:04.680379", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T15:36:04.694746", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T15:36:04.691403", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:36:04.675054", "type": "PresenceDetectedEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:36:04.717786", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T15:36:04.715151", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:36:04.727495", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T15:36:09.468767", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T15:36:13.500300", "type": "AssistantSpeechEvent", "data": "Goodbye!"}
+{"timestamp": "2025-09-04T15:36:13.942306", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T15:36:13.930218", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:36:13.994974", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T15:36:13.988118", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:36:14.003922", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T15:36:14.747965", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T15:36:14.740772", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:36:14.775576", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T15:36:14.769778", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:36:14.732310", "type": "PresenceLostEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:36:16.832495", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T15:36:16.825875", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T15:36:16.844719", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T15:36:21.603729", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T15:36:22.116163", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T15:36:27.052239", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T15:36:27.562921", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T15:36:29.049990", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T15:36:32.023300", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T15:36:32.660627", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T17:45:46.701616", "type": "SensorDataEvent", "data": "SensorData(temperature=24.17165074469324, humidity=58.26161578509747, timestamp=datetime.datetime(2025, 9, 4, 17, 45, 46, 701608), presence_detected=True)"}
+{"timestamp": "2025-09-04T17:45:46.718662", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T17:45:46.746262", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T17:45:46.742833", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:45:46.704322", "type": "PresenceDetectedEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:45:46.775297", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T17:45:46.768256", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:45:46.792893", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T17:45:51.533983", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T17:45:55.556474", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T17:45:56.069203", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T17:46:01.001462", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T17:46:01.512225", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T17:46:02.999278", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T17:46:06.448816", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T17:46:06.962263", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T17:46:11.893102", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T17:46:12.404686", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T17:46:12.788561", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T17:46:12.783697", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:46:12.816400", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T17:46:12.811523", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:46:12.774788", "type": "PresenceLostEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:46:15.367778", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T17:46:15.362558", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:46:15.384127", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T17:46:19.332547", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T17:46:20.115231", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T17:46:24.545143", "type": "AssistantSpeechEvent", "data": "Goodbye!"}
+{"timestamp": "2025-09-04T17:46:24.962620", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T17:46:24.957078", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:46:25.172617", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T17:46:25.162941", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:46:25.186739", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T17:46:29.912682", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T17:46:30.427634", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T17:46:35.362435", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T17:46:36.588917", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:52:27.009483", "type": "SensorDataEvent", "data": "SensorData(temperature=27.678865652989714, humidity=41.53620813360877, timestamp=datetime.datetime(2025, 9, 4, 20, 52, 27, 9475), presence_detected=False)"}
+{"timestamp": "2025-09-04T20:52:27.016917", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:52:27.030295", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:52:27.027638", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:52:27.011485", "type": "PresenceDetectedEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:52:27.056682", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:52:27.052948", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:52:27.064720", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T20:52:31.796126", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:52:32.308864", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:52:37.243153", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T20:52:39.233764", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T20:52:41.286328", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:52:41.801056", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:52:46.748504", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:52:47.265427", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:52:48.745264", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T20:52:52.070652", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:52:52.063709", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:52:52.084643", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:52:52.081860", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:52:52.050809", "type": "PresenceLostEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:52:52.202421", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:52:52.719163", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:52:55.683082", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:52:55.674173", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:52:55.693972", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T20:52:57.032158", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:52:57.026158", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:52:57.015700", "type": "ButtonPressEvent", "data": "force_chat"}
+{"timestamp": "2025-09-04T20:52:59.642559", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T20:53:00.415069", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:53:00.936084", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:53:04.867150", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T20:53:08.881393", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:53:09.402021", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:53:14.355321", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T20:53:16.119163", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:53:16.135615", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:53:16.132142", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:53:16.107076", "type": "PresenceDetectedEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:53:16.352248", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T20:53:18.394053", "type": "AssistantSpeechEvent", "data": "Goodbye!"}
+{"timestamp": "2025-09-04T20:53:18.616310", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:53:18.608449", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:53:18.846548", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:53:18.830483", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:53:18.858074", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T20:53:23.583283", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:53:24.095429", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:53:27.023647", "type": "SensorDataEvent", "data": "SensorData(temperature=26.681806914985696, humidity=45.32374983659858, timestamp=datetime.datetime(2025, 9, 4, 20, 53, 27, 23633), presence_detected=False)"}
+{"timestamp": "2025-09-04T20:53:29.025043", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T20:53:31.021993", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T20:53:33.041039", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:53:33.552199", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:53:36.158620", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:53:36.156607", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:53:36.170825", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:53:36.167930", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:53:36.152342", "type": "PresenceLostEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:53:36.516562", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:53:36.503798", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:53:36.528555", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T20:53:40.471277", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T20:53:41.255599", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:53:41.761984", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:53:43.351695", "type": "InterruptAudioEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:53:43.362216", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:54:06.447018", "type": "SensorDataEvent", "data": "SensorData(temperature=24.166728106241102, humidity=56.753595051343176, timestamp=datetime.datetime(2025, 9, 4, 20, 54, 6, 447009), presence_detected=False)"}
+{"timestamp": "2025-09-04T20:54:06.453344", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:54:06.465800", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:54:06.463672", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:54:06.448248", "type": "PresenceDetectedEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:54:06.493540", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:54:06.489798", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:54:06.501236", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T20:54:11.219564", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:54:11.731336", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:54:16.662262", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:54:17.177061", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:54:18.504125", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:54:18.497870", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:54:18.516460", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:54:18.513784", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:54:18.485959", "type": "PresenceLostEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:54:20.154639", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:54:20.147123", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:54:20.175017", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T20:54:24.114836", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T20:54:24.905862", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:54:25.432251", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:54:29.358334", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-04T20:54:29.547058", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T20:54:29.559852", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T20:54:29.557889", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:54:29.534804", "type": "PresenceDetectedEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:54:29.876003", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-04T20:54:31.355374", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-04T20:54:34.810842", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T20:54:37.219900", "type": "InterruptAudioEvent", "data": "None"}
+{"timestamp": "2025-09-04T20:54:37.234384", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}

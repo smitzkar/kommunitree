@@ -1,0 +1,10 @@
+{"timestamp": "2025-09-04T17:45:05.813700", "type": "SensorDataEvent", "data": "SensorData(temperature=23.553804285734905, humidity=41.65255055822034, timestamp=datetime.datetime(2025, 9, 4, 17, 45, 5, 813683), presence_detected=False)"}
+{"timestamp": "2025-09-04T17:45:05.818434", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-04T17:45:05.821126", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T17:45:05.821105", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:45:05.818383", "type": "PresenceDetectedEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:45:05.860166", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-04T17:45:05.860123", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-04T17:45:05.868320", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-04T17:45:10.590301", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-04T17:45:12.604316", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}

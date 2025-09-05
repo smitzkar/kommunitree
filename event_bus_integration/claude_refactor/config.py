@@ -41,12 +41,17 @@ class Config:
         'force_chat': 22
     }
     
+    #MARK: this or treelogger
     # system settings
     event_history_size: int = 100
-    debug_log_file: str = "event_log.jsonl" # uses json lines format (each line is a separate json object for easier parsing)
+    # uses json lines format (each line is a separate json object for easier parsing)
+    # NOT the same thing as the logs from tree_logger -> should probably choose one or the ohter
+    debug_log_file: str = "logs/event_log.jsonl" 
     
-    # simulation mode (for testing without hardware)
-    simulate_hardware: bool = True  # set False when you have real sensors
+    #MARK: simulation mode 
+    # (for testing without hardware)
+    # currently a single boolean (just to get it up and running quickly), when adding individual components, adjust this
+    simulate_hardware: bool = True  
 
 # global config instance - easy to import anywhere
 config = Config()

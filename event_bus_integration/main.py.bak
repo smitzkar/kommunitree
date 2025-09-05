@@ -32,11 +32,11 @@ import json
 from tree_logger import setup_logging, TreeLogger
 
 #MARK: logging
-log = setup_logging(log_per_session=False)  # Only call once, at the start
-tree_logger = TreeLogger() # for time_function
+log = setup_logging()  # Only call once, at the start
+tree_logger = TreeLogger()
 
 logger = logging.getLogger(__name__)  # really neat! basically creates a little module specific logger, using the root configs
-logger.info("This will go to both console and logs/treebot.log or logs/<timestamped_log>")
+logger.info("This will go to both console and logs/treebot.log")
 
 ## use decorator like this: 
 # @tree_logger.time_function("some_test_loop", "LOOP")
