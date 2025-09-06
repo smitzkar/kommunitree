@@ -210,3 +210,32 @@
 {"timestamp": "2025-09-04T20:54:34.810842", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
 {"timestamp": "2025-09-04T20:54:37.219900", "type": "InterruptAudioEvent", "data": "None"}
 {"timestamp": "2025-09-04T20:54:37.234384", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-05T23:30:14.630096", "type": "SensorDataEvent", "data": "SensorData(temperature=29.58311059785617, humidity=56.10358255547702, timestamp=datetime.datetime(2025, 9, 5, 23, 30, 14, 630087), presence_detected=True)"}
+{"timestamp": "2025-09-05T23:30:30.668713", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-05T23:30:30.682167", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-05T23:30:30.678811", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-05T23:30:30.654543", "type": "PresenceDetectedEvent", "data": "None"}
+{"timestamp": "2025-09-05T23:30:30.775783", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-05T23:30:30.773773", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-05T23:30:30.780233", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-05T23:30:35.589769", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-05T23:30:36.261882", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-05T23:30:39.707205", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-05T23:30:39.703364", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-05T23:30:39.729766", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-05T23:30:39.724951", "type": "ConversationEndEvent", "data": "None"}
+{"timestamp": "2025-09-05T23:30:39.698427", "type": "PresenceLostEvent", "data": "None"}
+{"timestamp": "2025-09-05T23:30:41.208230", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-05T23:30:41.982326", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-05T23:30:44.956161", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>}"}
+{"timestamp": "2025-09-05T23:30:44.948273", "type": "ConversationStartEvent", "data": "None"}
+{"timestamp": "2025-09-05T23:30:44.973604", "type": "AssistantSpeechEvent", "data": "Hello! I noticed you're here. Would you like to chat?"}
+{"timestamp": "2025-09-05T23:30:48.915945", "type": "AssistantSpeechEvent", "data": "That reminds me of something interesting..."}
+{"timestamp": "2025-09-05T23:30:49.720862", "type": "AssistantSpeechEvent", "data": "Are you still there?"}
+{"timestamp": "2025-09-05T23:30:54.160982", "type": "UserSpeechEvent", "data": "Hello, how are you today?"}
+{"timestamp": "2025-09-05T23:30:54.683531", "type": "AssistantSpeechEvent", "data": "I heard: Hello, how are you today?..."}
+{"timestamp": "2025-09-05T23:30:54.745393", "type": "InterruptAudioEvent", "data": "None"}
+{"timestamp": "2025-09-05T23:30:55.290813", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.CONVERSATION_ACTIVE: 'conversation_active'>, 'new': <SystemState.IDLE: 'idle'>}"}
+{"timestamp": "2025-09-05T23:34:31.839141", "type": "SensorDataEvent", "data": "SensorData(temperature=21.852221775309093, humidity=55.04123297681608, timestamp=datetime.datetime(2025, 9, 5, 23, 34, 31, 839124), presence_detected=False)"}
+{"timestamp": "2025-09-05T23:35:04.965101", "type": "InterruptAudioEvent", "data": "None"}
+{"timestamp": "2025-09-05T23:35:05.152452", "type": "SystemStateChangeEvent", "data": "{'old': <SystemState.IDLE: 'idle'>, 'new': <SystemState.IDLE: 'idle'>}"}

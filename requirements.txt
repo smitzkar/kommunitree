@@ -19,6 +19,8 @@ python-dotenv #==1.0.1
 streamlit
 # openai_agent[viz] # graphviz needs to be installed via sudo apt (doesn't seem to be supported by the same openai version as voice...)
 ipykernel
+rich # for fancy console output
+pyserial # to communicate with serial 
 
 #=== sudo apt install ===
 
